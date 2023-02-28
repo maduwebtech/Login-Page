@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<form id="login-form" onsubmit="return validation()">
+		<div>
+			<span><i class="fa fa-user-circle-o"></i></span>
+		</div>
+		<div class="login-field">
+			<i class="fa fa-envelope"></i>
+			<input type="email" name="" placeholder="email" id="useremail">
+			<span id="email_error"></span>
+		</div>
+		<div class="login-field">
+			<i class="fa fa-lock fa-lg"></i>
+			<input type="password" name="" placeholder="password">
+		</div>
+		<div>
+			<button onclick="btnClick()">Login</button>
+		</div>
+		<div id="bottom-links">
+			<div><a href="">Forgot Password?</a></div>
+			<div>-OR-</div>
+			<div><a href="">Create account?</a></div>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	function validation(){
+		var a=document.getElementById('useremail').value;
+		if (a=="") {
+			document.getElementById("email_error").innerHTML="";
+			return false;
+		}
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
